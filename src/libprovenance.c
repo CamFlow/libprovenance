@@ -27,6 +27,7 @@
 #include <pwd.h>
 #include <grp.h>
 #include <linux/provenance_types.h>
+#include <netinet/in.h>
 
 #include "provenance.h"
 #include "provenanceutils.h"
