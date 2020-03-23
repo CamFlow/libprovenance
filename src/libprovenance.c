@@ -512,12 +512,12 @@ struct ip6addr {
 };
 
 static int __param_to_ipv6_filter(const char* param, prov_ipv6_filter* filter){
-  int err;
+  int err, i;
   struct ip6addr ip;
   uint32_t port;
 
   err = sscanf(param, "[%x:%x:%x:%x:%x:%x:%x:%x]:%u", &ip.buffer[0], &ip.buffer[1], &ip.buffer[2], &ip.buffer[3], &ip.buffer[4], &ip.buffer[5], &ip.buffer[6], &ip.buffer[7], &port);
-  for (int i = 0; i < 8; i++) {
+  for (i = 0; i < 8; i++) {
     filter->ip.s6_addr[2 * i] = (ip.buffer[i] >> 8) & 0xFF;
     filter->ip.s6_addr[2 * i + 1] = ip.buffer[i] & 0xFF;
   }
