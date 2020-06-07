@@ -20,7 +20,6 @@
 #include <stdbool.h>
 #include <sys/types.h>
 #include <sys/socket.h>
-#include <netinet/in.h>
 #include <linux/provenance.h>
 #include <linux/provenance_fs.h>
 #include <linux/provenance_utils.h>
