@@ -157,7 +157,7 @@ static inline void __add_name_id(union prov_identifier* name_id, bool comma){
     name = name_id_to_str(name_id);
     if (name != NULL)
       break;
-    usleep(50000);
+    usleep((i+1)*50000);
   }
   if (name != NULL)
     __add_string_attribute("cf:name", name, comma);

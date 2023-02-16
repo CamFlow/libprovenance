@@ -357,8 +357,8 @@ void long_prov_record(union long_prov_elt* msg){
       break;
     case ENT_PATH:
       name_add_entry(&(msg->file_name_info.identifier), msg->file_name_info.name);
-      if(prov_ops.log_file_name!=NULL)
-        prov_ops.log_file_name(&(msg->file_name_info));
+      //if(prov_ops.log_file_name!=NULL)
+      //prov_ops.log_file_name(&(msg->file_name_info));
       break;
     case ENT_ADDR:
       if(prov_ops.log_address!=NULL)
