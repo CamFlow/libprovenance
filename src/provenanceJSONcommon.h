@@ -153,7 +153,7 @@ static inline void __add_name_id(union prov_identifier* name_id, bool comma){
   int i;
   if (name_id->node_id.type == 0)
     return;
-  for (i = 0; i < 5; i++) {
+  for (i = 0; i < 10; i++) {
     name = name_id_to_str(name_id);
     if (name != NULL)
       break;
