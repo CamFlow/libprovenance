@@ -163,10 +163,12 @@ int provenance_reset_propagate_used_filter( void );
 int provenance_reset_propagate_informed_filter( void );
 
 static inline int provenance_reset_propagate_relation_filter( void ) {
-  provenance_reset_propagate_derived_filter();
-  provenance_reset_propagate_generated_filter();
-  provenance_reset_propagate_used_filter();
-  provenance_reset_propagate_informed_filter();
+  int rc = 0;
+  rc |= provenance_reset_propagate_derived_filter();
+  rc |= provenance_reset_propagate_generated_filter();
+  rc |= provenance_reset_propagate_used_filter();
+  rc |= provenance_reset_propagate_informed_filter();
+  return rc;
 }
 
 #endif
